@@ -1,0 +1,1 @@
+web: gunicorn neybuzz.wsgi --log-file -
