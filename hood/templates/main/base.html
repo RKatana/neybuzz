@@ -1,0 +1,51 @@
+{% load bootstrap4 %}
+{% load static %}
+{% load cloudinary %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeighborHood</title>
+
+    {% block styles %}
+        {% bootstrap_css %}
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="{%static 'css/all.css'%}">
+        <link rel="stylesheet" href="{%static 'css/style.css'%}" >
+        <link rel="stylesheet" href="{% static 'demo/demo.css' %}" rel="stylesheet" />
+    {% endblock %}
+
+</head>
+<body>
+    {% include "main/navbar.html" %}
+    
+    {% block content %}
+
+    {% endblock %}
+
+    {% block script %}
+        <!--   Core JS Files   -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/core/popper.min.js' %}"></script>
+        <script src="{% static 'js/core/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <!-- Chart JS -->
+        <script src="{% static 'js/plugins/chartjs.min.js' %}"></script>
+        <!--  Notifications Plugin    -->
+        <script src="{% static 'js/plugins/bootstrap-notify.js' %}"></script>
+        <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+        <script src="{% static 'js/now-ui-dashboard.js?v=1.0.1' %}"></script>
+        <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+        <script src="{% static 'demo/demo.js' %}"></script>
+        <script>
+            $(document).ready(function() {
+                // Javascript method's body can be found in assets/js/demos.js
+                demo.initDashboardPageCharts();
+            });
+        </script>
+        {% bootstrap_javascript %}
+    {% endblock %}
+</body>
