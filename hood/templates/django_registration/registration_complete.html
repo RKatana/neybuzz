@@ -1,0 +1,19 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+	{% block title_block %}
+		Registration Complete
+	{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+    <div class="row">
+    <div class="bg-white text-center rounded shadow-sm py-5 px-4 mt-5">
+        <h5 class="mb-0">Registration Complete.</h5>
+        <a href="/accounts/login">
+            <span class="small text-uppercase text-muted">Click Here</span>
+        </a>
+    </div>
+    </div>
+</div>
+{% endblock %}
