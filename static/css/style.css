@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: "Poppins", Gotham Rounded, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    color: #2CA8FF !important;
+}
+
+.wrap {
+    width: 390px;
+    background-color: #FFF;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 77px 55px 33px 55px;
+}
+
+.form-title {
+    width: 316px;
+}
+
+.form-title img {
+    max-width: 100%;
+}
