@@ -51,7 +51,12 @@ INSTALLED_APPS = [
     'bootstrap4',
     'django_registration',
 ]
-
+cloudinary.config(
+  cloud_name = config('CLOUD_NAME'),
+  api_key = config('API_KEY'),
+  api_secret = config('API_SECRET'),
+  cloudinary_url = config('CLOUDINARY_URL'),
+)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
