@@ -15,6 +15,8 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import django_heroku
+import dj_database_url
+from decouple import config
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
@@ -46,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
 
-    'hood'
     'hood',
     'cloudinary',
     'bootstrap4',
