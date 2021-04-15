@@ -1,0 +1,63 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% load cloudinary %}
+
+{% block content %}
+<div class="container content">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h5 class="title">Edit Profile</h5>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    {% csrf_token %}
+                                    {% bootstrap_form form %}
+                                </div>
+                                <div class="mt-5">
+                                    <button type="submit" class="btn btn-warning btn-icon-text"> Update </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-user mt-5">
+                <div class="image">
+                    <img src="{{ user.profile.image.url }}" alt="...">
+                </div>
+                <div class="card-body">
+                    <div class="author">
+                        <a href="#">
+                            <img class="avatar border-gray" src="{{ user.profile.image.url }}" alt="...">
+                            <h5 class="title">{{ user.username }}</h5>
+                        </a>
+                    </div>
+                    <p class="description text-center">
+                        "{{ user.profile.bio }}"
+                    </p>
+                </div>
+                <hr>
+                <div class="button-container">
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                        <i class="fab fa-google-plus-g"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

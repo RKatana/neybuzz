@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load cloudinary %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart mt-5">
+                <div class="card-header">
+                    <h5 class="card-category">{{ post.location }}</h5>
+                    <h4 class="card-title">{{ post.name }}</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{{ post.image.url }}" alt="" srcset="">
+                    <p>
+                        {{ post.description }}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <a href="">
+                            {{ post.posted_by }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
