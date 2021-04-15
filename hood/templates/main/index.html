@@ -1,0 +1,30 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load cloudinary %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for hood in hoods %}
+        <div class="col-lg-4 col-md-6">
+            <div class="card card-chart mt-5">
+                <div class="card-header">
+                    <h5 class="card-category">{{ hood.location }}</h5>
+                    <h4 class="card-title">{{ hood.name }}</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{{ hood.image.url }}" alt="" srcset="">
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <a href="">
+                            Join the neighborhood
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
