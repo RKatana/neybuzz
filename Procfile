@@ -1,1 +1,1 @@
-web: gunicorn neybuzz.wsgi --log-file -
+web: gunicorn neybuz.wsgi --log-file -
